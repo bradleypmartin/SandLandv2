@@ -1,18 +1,27 @@
 <% include ../partials/header %>
 
-<div class="container">
-    
-    <h1>Sign up form</h1>
-    
-    <form action="/register" method="POST">
-        <input type="text" name = "username" placeholder="username">
-        <input type="password" name = "password" placeholder="password">
-        <button>Submit</button>
-    </form>
-
-    <li><a href="/register">Sign Up</a></li>
-    <li><a href="/login">Login</a></li>
-    <li><a href="/logout">Logout</a></li>
-</div>
+        <div class="container">
+            
+            <h1><strong>Registration</strong> (for new users)</h1>
+            
+            <hr>
+            
+            <p><em>Since we're currently operating over HTTP (and not HTTPS), and since
+            I'm still getting the hang of web security best practices, I'd strongly suggest
+            that you register with a 'fun' username and password here (that are in no way
+            connected to any accounts you may have elsewhere).</em></p>
+            
+            <p><em>I'm not currently saving emails or contact info, so as long as
+            you're using a 'throwaway' username and password (as described above),
+            feel free to choose whatever you like! If you simply get bounced back
+            to this page, the specific username you chose might already have been taken
+            (so feel free to choose another). I'll get some more helpful error alerts working
+            soon.</em></p>
+            
+            <form action="/register" method="POST">
+                <input type="text" name = "username" placeholder="username">
+                <input type="password" name = "password" placeholder="password">
+                <button>Submit</button>
+            </form>
 
 <% include ../partials/footer %>

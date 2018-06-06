@@ -1,17 +1,18 @@
 <% include ../partials/header %>
 
-<div class="container">
-    <h1>Login page</h1>
-
-    <form action="/login" method="POST">
-        <input type="text" name="username" placeholder="username">
-        <input type="password" name="password" placeholder="password">
-        <button>Login</button>
-    </form>
-    
-    <li><a href="/register">Sign Up</a></li>
-    <li><a href="/login">Login</a></li>
-    <li><a href="/logout">Logout</a></li>
-</div>
+        <div class="container">
+            <h1><strong>Login</strong></h1>
+            
+            <hr>
+            
+            <p><em>If you've already created a username (that wasn't already taken) and
+            password, you can simply log in here. Otherwise, please proceed to the
+            <a href="/register">registration</a> page.</em></p>
+        
+            <form action="/login" method="POST">
+                <input type="text" name="username" placeholder="username">
+                <input type="password" name="password" placeholder="password">
+                <button>Login</button>
+            </form>
 
 <% include ../partials/footer %>
