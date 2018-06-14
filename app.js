@@ -91,12 +91,12 @@ function isLoggedIn(req, res, next){
 }
 
 // AWS http server start (using nginx to route port 80 -> 3000)
-// app.listen(3000, function(){
-//     console.log("Sandbox server started.")
-// });
+app.listen(3000, function(){
+    console.log("Sandbox server started.")
+});
 
 // server start for c9 debugging
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("Sandbox server started.");
-});
+// app.listen(process.env.PORT, process.env.IP, function(){
+//     console.log("Sandbox server started.");
+// });
 
