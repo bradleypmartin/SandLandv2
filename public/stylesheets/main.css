@@ -13,3 +13,9 @@ p {
 form {
     padding: 10px 0;
 }
+
+.kitty {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}

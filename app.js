@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 
 app.use(require("express-session")({
-    secret: "Rusty is the best and cutest dog in the world",
+    secret: "Man, I should probably change these secrets to something not public",
     resave: false,
     saveUninitialized: false
 }));
@@ -35,8 +35,8 @@ app.get("/", function(req, res){
     res.render("home");
 });
 
-app.get("/secret", isLoggedIn, function(req, res){
-    res.render("secret");
+app.get("/appselection", isLoggedIn, function(req, res){
+    res.render("appselection");
 });
 
 // auth routes
@@ -56,7 +56,7 @@ app.post("/register", function(req, res){
            return res.render('register');
        }
        passport.authenticate("local")(req, res, function(){
-           res.redirect("/secret");
+           res.redirect("/appselection");
        });
     });
 });
@@ -71,7 +71,7 @@ app.get("/login", function(req, res){
 // login logic
 // middleware
 app.post("/login", passport.authenticate("local", {
-    successRedirect: "/secret",
+    successRedirect: "/appselection",
     failureRedirect: "/login"
 }) , function(req, res){
         
